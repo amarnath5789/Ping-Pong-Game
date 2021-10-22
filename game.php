@@ -2,50 +2,37 @@
 <html lang="en">
 
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
     <meta charset="UTF-8" />
     <title>Ping Pong Game | CPPSECRETS</title>
-
     <style>
-        body,
-        html {
-            height: 100%;
-            margin: 0;
-        }
-
-        .bg {
-            background-image: url("01.jpg");
-            height: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+        body {
+            background: no-repeat url("floor.jpg");
         }
 
         .navbar {
             display: flex;
             flex-wrap: wrap;
-            background-color: #30569c00;
+            background-color: white;
             padding: 0px;
-            box-shadow: 0px 0px 1px 0px #0000004f;
+            box-shadow: 0px 0px 5px 0px #0000004f;
         }
 
-        .log {
-            border-radius: 50%;
-            position: relative;
-            left: 10px;
-            top: 12%;
-        }
-
-        .play {
-            left: 70%;
-            top: 50%;
+        #pong {
+            border: 8px solid white;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            border-radius: 3px;
         }
 
         .box {
             background: linear-gradient(to right, gold, darkorange);
             color: white;
-            --width: 260px;
+            --width: 170px;
             --height: calc(var(--width) / 3);
             width: var(--width);
             height: var(--height);
@@ -63,6 +50,8 @@
             position: relative;
             overflow: hidden;
             text-decoration: none;
+            left: 10px;
+            top: 110px;
         }
 
         .box:hover {
@@ -87,8 +76,9 @@
 
         .txt {
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 900;
             color: white;
+            font-size: 27px;
         }
         .txt:hover{
             color: black;
@@ -99,17 +89,13 @@
 <body>
     <nav class="navbar navbar-expand-md fixed-top">
         <div class="container">
-            <a href="https://cppsecrets.com/"><img src="logo.png" width="165" height="70" /></a>
+            <a href="https://cppsecrets.com/"><img src="logo.png" width="160" height="70" /></a>
         </div>
     </nav>
-    <div class="bg">
-        <img class="log" src="ping.png" alt="logo">
-
-        <div class="box play"><a class="txt" href="game.php">PLAY NOW</a></div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
+    <canvas id="pong" width="850" height="450"></canvas>
+    <div class="box play"><a class="txt" href="index.php">EXIT</a></div>
+    <script src="pong.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 
 </html>
