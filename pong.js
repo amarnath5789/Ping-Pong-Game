@@ -21,7 +21,7 @@ const ball = {
     y : canvas.height/2,
     radius : 14,
     velocityX : 5,
-    velocityY : 5,
+    velocityY : 0,
     speed : 7,
     color : "YELLOW"
 }
