@@ -21,7 +21,7 @@ const ball = {
     y : canvas.height/2,
     radius : 14,
     velocityX : 5,
-    velocityY : 0,
+    velocityY : 5,
     speed : 7,
     color : "YELLOW"
 }
@@ -164,7 +164,7 @@ function update(){
         ball.velocityY = ball.speed * Math.sin(angleRad);
         
         // speed up the ball everytime a paddle hits it.
-        ball.speed += 0.1;
+        ball.speed += 0.2;
     }
 }
 

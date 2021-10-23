@@ -6,8 +6,13 @@
     <meta charset="UTF-8" />
     <title>Ping Pong Game | CPPSECRETS</title>
     <style>
-        body {
-            background: no-repeat url("floor.jpg");
+        .bg {
+            background-image: url("floor.jpg");
+            height: 100vh;
+            width: 100vw;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .navbar {
@@ -32,7 +37,7 @@
         .box {
             background: linear-gradient(to right, gold, darkorange);
             color: white;
-            --width: 170px;
+            --width: 150px;
             --height: calc(var(--width) / 3);
             width: var(--width);
             height: var(--height);
@@ -76,11 +81,12 @@
 
         .txt {
             text-decoration: none;
-            font-weight: 900;
+            font-weight: 800;
             color: white;
-            font-size: 27px;
+            font-size: 25px;
         }
-        .txt:hover{
+
+        .txt:hover {
             color: black;
         }
     </style>
@@ -92,8 +98,10 @@
             <a href="https://cppsecrets.com/"><img src="logo.png" width="160" height="70" /></a>
         </div>
     </nav>
-    <canvas id="pong" width="850" height="450"></canvas>
-    <div class="box play"><a class="txt" href="index.php">EXIT</a></div>
+    <div class="bg">
+        <canvas id="pong" width="850" height="450"></canvas>
+        <div class="box play"><a class="txt" href="index.php">EXIT</a></div>
+    </div>
     <script src="pong.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>

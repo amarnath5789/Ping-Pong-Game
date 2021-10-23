@@ -8,6 +8,7 @@
     <title>Ping Pong Game | CPPSECRETS</title>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
         body,
         html {
             height: 100%;
@@ -16,7 +17,7 @@
 
         .bg {
             background-image: url("01.jpg");
-            height: 100%;
+            height: 100vh;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -52,8 +53,8 @@
             text-align: center;
             line-height: var(--height);
             font-size: calc(var(--height) / 2.5);
-            font-family: sans-serif;
-            letter-spacing: 0.2em;
+            font-family: 'Rampart One', cursive;
+            letter-spacing: 0.1em;
             border: 1px solid darkgoldenrod;
             border-radius: 2em;
             transform: perspective(500px) rotateY(-15deg);
@@ -87,8 +88,9 @@
 
         .txt {
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 900;
             color: white;
+            font-size: 38px;
         }
         .txt:hover{
             color: black;
