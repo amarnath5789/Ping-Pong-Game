@@ -24,14 +24,14 @@
         }
 
         #pong {
-            border: 8px solid white;
+            border: 10px solid white;
             position: absolute;
             margin: auto;
             top: 0;
             right: 0;
             left: 0;
             bottom: 0;
-            border-radius: 3px;
+            border-radius: 5px;
         }
 
         .box {
